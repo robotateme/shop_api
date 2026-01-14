@@ -18,6 +18,7 @@ class AddPercentValueTest extends TestCase
             [100.05, 55, 155.08],
             [10, 20, 12],
             [1000, 20, 1200],
+            [100.0, 0, 100.0],
         ];
     }
 

@@ -12,7 +12,7 @@ use App\Repository\TaxRepository;
 use App\Service\CalculatePriceStrategies\FixedStrategy;
 use App\Service\CalculatePriceStrategies\NoDiscountStrategy;
 use App\Service\CalculatePriceStrategies\PercentStrategy;
-use App\Service\Exceptions\CalculatePriceException;
+use App\Service\Exception\CalculatePriceException;
 use Symfony\Component\VarExporter\Exception\ExceptionInterface;
 
 readonly class CalculatePriceScenario

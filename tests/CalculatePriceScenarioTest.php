@@ -11,7 +11,7 @@ use App\Repository\CouponRepository;
 use App\Repository\ProductRepository;
 use App\Repository\TaxRepository;
 use App\Service\CalculatePriceScenario;
-use App\Service\Exceptions\CalculatePriceException;
+use App\Service\Exception\CalculatePriceException;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\MockObject\Exception;
 use PHPUnit\Framework\TestCase;
@@ -23,15 +23,23 @@ class CalculatePriceScenarioTest extends TestCase
     public static function additionProvider(): array
     {
         return [
-//            [12000, 20, 20, CouponTypesEnum::TypePercent, 115.20],
-//            [12000, 20, 20, CouponTypesEnum::TypeFixed, 143.80],
-//            [12000, 20, 20, CouponTypesEnum::TypeDefault, 144],
-//            [10000, 10000, 20, CouponTypesEnum::TypeFixed, 20.0],
+            [12000, 20, 20, CouponTypesEnum::TypePercent, 115.20],
+            [12000, 20, 20, CouponTypesEnum::TypeFixed, 143.80],
+            [12000, 0, 20, CouponTypesEnum::TypeDefault, 144],
+            [10000, 10000, 20, CouponTypesEnum::TypeFixed, 20.0],
             [10000, 10000, 0, CouponTypesEnum::TypeFixed, 20.0],
+            [10000, 0, 20, CouponTypesEnum::TypeFixed, 120.0],
+            [10000, 0, 0, CouponTypesEnum::TypeFixed, 100.0],
+            [10000, -10, 0, CouponTypesEnum::TypePercent, 110.0],
         ];
     }
 
-    /**115.20
+    /**
+     * @param int $price
+     * @param int $percent
+     * @param int $taxRate
+     * @param CouponTypesEnum $couponType
+     * @param float $expectedPrice
      * @throws CalculatePriceException
      * @throws Exception
      * @throws ExceptionInterface
@@ -87,7 +95,7 @@ class CalculatePriceScenarioTest extends TestCase
             $taxRepository
         );
 
-        if($taxRate <= 0) {
+        if($taxRate <= 0 && $percent > 0) {
             $this->expectException(CalculatePriceException::class);
         }
 

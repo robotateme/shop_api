@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Service\Exceptions;
+namespace App\Service\Exception;
 
 use Exception;
 
-class PurchaseException extends Exception
+class CalculatePriceException extends Exception
 {
     protected $message = "";
     protected $code = 400;

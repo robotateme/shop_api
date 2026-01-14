@@ -4,7 +4,7 @@ namespace App\Service;
 
 use App\Dto\CalculatePriceOutputDto;
 use App\Enum\PaymentProcessorsEnum;
-use App\Service\Exceptions\PurchaseException;
+use App\Service\Exception\PurchaseException;
 use Exception;
 use Systemeio\TestForCandidates\PaymentProcessor\PaypalPaymentProcessor;
 use Systemeio\TestForCandidates\PaymentProcessor\StripePaymentProcessor;

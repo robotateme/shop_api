@@ -16,6 +16,7 @@ class SubPercentValueTest extends TestCase
             [100, 20, 80.00],
             [100.05, 30, 70.04],
             [100.05, 55, 45.02],
+            [100.0, 0, 100.0],
         ];
     }
 

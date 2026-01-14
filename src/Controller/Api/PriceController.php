@@ -5,7 +5,7 @@ namespace App\Controller\Api;
 use App\Dto\CalculatePriceInputDto;
 use App\Request\CalculatePriceRequest;
 use App\Service\CalculatePriceScenario;
-use App\Service\Exceptions\CalculatePriceException;
+use App\Service\Exception\CalculatePriceException;
 use Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;

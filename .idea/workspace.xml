@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3141fc6-64c4-41d0-9985-b32762f3c7a4" name="Changes" comment="Fix tests">
+    <list default="true" id="f3141fc6-64c4-41d0-9985-b32762f3c7a4" name="Changes" comment="Fix Dto">
+      <change afterPath="$PROJECT_DIR$/src/Value/Exception/ValueException.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Api/PriceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Api/PriceController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Api/PurchaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Api/PurchaseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dto/PurchaseInputDto.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dto/PurchaseInputDto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Enum/PaymentProcessorsEnum.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Enum/PaymentProcessorsEnum.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/CalculatePriceScenario.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/CalculatePriceScenario.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service/CalculatePriceStrategies/FixedStrategy.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/CalculatePriceStrategies/FixedStrategy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/CalculatePriceStrategies/NoDiscountStrategy.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/CalculatePriceStrategies/NoDiscountStrategy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/Exceptions/CalculatePriceException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/Exception/CalculatePriceException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/Exceptions/PurchaseException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/Exception/PurchaseException.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service/PurchaseScenario.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/PurchaseScenario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/AddPercentValueTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/AddPercentValueTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/CalculatePriceScenarioTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/CalculatePriceScenarioTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/SubPercentValueTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SubPercentValueTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +193,7 @@
       <updated>1768211977862</updated>
       <workItem from="1768211978940" duration="23895000" />
       <workItem from="1768330729108" duration="5438000" />
-      <workItem from="1768345551270" duration="8152000" />
+      <workItem from="1768345551270" duration="9894000" />
     </task>
     <task id="LOCAL-00001" summary="Recovery Commit">
       <option name="closed" value="true" />
@@ -206,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768355963789</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fix Dto">
+      <option name="closed" value="true" />
+      <created>1768356773033</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1768356773033</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +228,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Recovery Commit" />
     <MESSAGE value="Fix tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix tests" />
+    <MESSAGE value="Fix Dto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix Dto" />
   </component>
 </project>

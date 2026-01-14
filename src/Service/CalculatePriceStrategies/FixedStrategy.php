@@ -4,7 +4,7 @@ namespace App\Service\CalculatePriceStrategies;
 
 use App\Dto\CalculatePriceOutputDto;
 use App\Service\CalculatePriceStrategies\Contract\AbstractStrategy;
-use App\Service\Exceptions\CalculatePriceException;
+use App\Service\Exception\CalculatePriceException;
 use App\Value\AddPercentValue;
 use App\Value\PriceValue;
 use Symfony\Component\VarExporter\Exception\ExceptionInterface;
