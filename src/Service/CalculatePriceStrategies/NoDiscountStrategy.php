@@ -3,18 +3,13 @@
 namespace App\Service\CalculatePriceStrategies;
 
 use App\Dto\CalculatePriceOutputDto;
-use App\Entity\Coupon;
-use App\Entity\Product;
-use App\Entity\Tax;
 use App\Service\CalculatePriceStrategies\Contract\AbstractStrategy;
-use App\Service\CalculatePriceStrategies\Contract\StrategyInterface;
 use App\Value\AddPercentValue;
 use App\Value\PriceValue;
 use Symfony\Component\VarExporter\Exception\ExceptionInterface;
-use Symfony\Component\VarExporter\Hydrator;
 use Symfony\Component\VarExporter\Instantiator;
 
-class NoDiscountStrategy extends AbstractStrategy
+final class NoDiscountStrategy extends AbstractStrategy
 {
 
     /**

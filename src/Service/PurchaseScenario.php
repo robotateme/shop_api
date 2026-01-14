@@ -14,10 +14,10 @@ readonly class PurchaseScenario
     /**
      * @throws PurchaseException
      */
-    public function handle(CalculatePriceOutputDto $input, string $paymentProcessor): bool
+    public function handle(CalculatePriceOutputDto $input, PaymentProcessorsEnum $paymentProcessor): bool
     {
         switch (true) {
-            case $paymentProcessor === PaymentProcessorsEnum::Paypal->value:
+            case $paymentProcessor === PaymentProcessorsEnum::Paypal:
                 $payPalProcess = new PaypalPaymentProcessor();
                 try {
                     $payPalProcess->pay($input->finalPrice);
@@ -25,7 +25,7 @@ readonly class PurchaseScenario
                     throw new PurchaseException($e->getMessage());
                 }
                 return true;
-            case $paymentProcessor === PaymentProcessorsEnum::Stripe->value:
+            case $paymentProcessor === PaymentProcessorsEnum::Stripe:
                 $stripeProcess = new StripePaymentProcessor();
                 return $stripeProcess->processPayment($input->finalPrice);
             default:

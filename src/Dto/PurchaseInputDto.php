@@ -21,7 +21,7 @@ final class PurchaseInputDto
     public ?string $taxNumber;
 
     #[Assert\NotBlank]
-    #[Assert\Type('string')]
-    #[Assert\Choice(callback: [PaymentProcessorsEnum::class, 'getValues'])]
-    public ?string $paymentProcessor = null;
+    #[Assert\Type(PaymentProcessorsEnum::class)]
+    #[Assert\Choice([PaymentProcessorsEnum::Paypal, PaymentProcessorsEnum::Stripe])]
+    public PaymentProcessorsEnum $paymentProcessor;
 }

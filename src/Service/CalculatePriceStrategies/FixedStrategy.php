@@ -10,7 +10,7 @@ use App\Value\PriceValue;
 use Symfony\Component\VarExporter\Exception\ExceptionInterface;
 use Symfony\Component\VarExporter\Instantiator;
 
-class FixedStrategy extends AbstractStrategy
+final class FixedStrategy extends AbstractStrategy
 {
     /**
      * @return CalculatePriceOutputDto
