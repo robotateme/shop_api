@@ -3,17 +3,13 @@
 namespace App\Controller\Api;
 
 use App\Dto\CalculatePriceInputDto;
-use App\Request\CalculatePriceRequest;
 use App\Service\CalculatePriceScenario;
-use App\Service\Exception\CalculatePriceException;
 use Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Attribute\MapRequestPayload;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\VarExporter\Exception\ExceptionInterface;
-use Symfony\Component\VarExporter\Hydrator;
 
 final class PriceController extends AbstractController
 {
