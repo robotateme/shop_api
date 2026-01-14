@@ -3,7 +3,7 @@ declare(strict_types=1);
 namespace App\Service;
 
 use App\Dto\CalculatePriceInputDto;
-use App\Dto\CalculatePriceOutput;
+use App\Dto\CalculatePriceOutputDto;
 use App\Dto\PurchaseInputDto;
 use App\Enum\CouponTypesEnum;
 use App\Repository\CouponRepository;
@@ -29,7 +29,7 @@ readonly class CalculatePriceScenario
      * @throws CalculatePriceException
      * @throws ExceptionInterface
      */
-    public function handle(CalculatePriceInputDto|PurchaseInputDto $input): CalculatePriceOutput
+    public function handle(CalculatePriceInputDto|PurchaseInputDto $input): CalculatePriceOutputDto
     {
         $product = $this->productRepository->find($input->product);
         if ($product === null) {

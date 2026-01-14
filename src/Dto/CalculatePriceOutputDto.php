@@ -4,7 +4,7 @@ namespace App\Dto;
 
 use App\Enum\CouponTypesEnum;
 
-final class CalculatePriceOutput
+final class CalculatePriceOutputDto
 {
     public float $price;
     public float $taxRate;

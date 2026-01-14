@@ -2,7 +2,7 @@
 
 namespace App\Service\CalculatePriceStrategies;
 
-use App\Dto\CalculatePriceOutput;
+use App\Dto\CalculatePriceOutputDto;
 use App\Entity\Coupon;
 use App\Entity\Product;
 use App\Entity\Tax;
@@ -18,15 +18,15 @@ class NoDiscountStrategy extends AbstractStrategy
 {
 
     /**
-     * @return CalculatePriceOutput
+     * @return CalculatePriceOutputDto
      * @throws ExceptionInterface
      */
-    public function handle(): CalculatePriceOutput
+    public function handle(): CalculatePriceOutputDto
     {
         $price = new PriceValue($this->product->getPrice());
         $taxedPrice = new AddPercentValue($price->getValue(), $this->tax->getRate());
 
-        return Instantiator::instantiate(CalculatePriceOutput::class, [
+        return Instantiator::instantiate(CalculatePriceOutputDto::class, [
             'price' => $price->getValue(),
             'taxRate' => $this->tax->getRate(),
             'couponValue' => 0,

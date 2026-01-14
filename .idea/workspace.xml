@@ -4,50 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3141fc6-64c4-41d0-9985-b32762f3c7a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Dto/PurchaseInputDto.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/CalculatePriceStrategies/Contract/AbstractStrategy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Value/AddPercentValue.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Value/PriceValue.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Value/SubPercentValue.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/AddPercentValueTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/SubPercentValueTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_12_29_25__2_46PM.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/test_shop.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/reference.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/reference.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20251229141240.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20260112143655.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20251229141811.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20260112143730.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20251229191719.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20251229213142.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20251229214030.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Api/PriceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Api/PriceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Api/PurchaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Api/PurchaseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/CouponFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/CouponFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/ProductFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/ProductFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dto/CalculatePriceInput.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dto/CalculatePriceInputDto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dto/CalculatePriceOutput.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dto/CalculatePriceOutput.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dto/PurchaseInput.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ProductRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Request/CalculatePriceRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Request/CalculatePriceRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Request/Contract/AbstractRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Request/Contract/AbstractRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Request/PurchaseRequest.php" beforeDir="false" />
+    <list default="true" id="f3141fc6-64c4-41d0-9985-b32762f3c7a4" name="Changes" comment="Recovery Commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dto/CalculatePriceInputDto.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dto/CalculatePriceInputDto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dto/CalculatePriceOutput.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dto/CalculatePriceOutputDto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dto/PurchaseInputDto.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dto/PurchaseInputDto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Enum/CouponTypesEnum.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Enum/CouponTypesEnum.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CouponRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CouponRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/TaxRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/TaxRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Request/CalculatePriceRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Request/Contract/AbstractRequest.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service/CalculatePriceScenario.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/CalculatePriceScenario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/CalculatePriceStrategies/Contract/StrategyInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/CalculatePriceStrategies/Contract/StrategyInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service/CalculatePriceStrategies/FixedStrategy.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/CalculatePriceStrategies/FixedStrategy.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service/CalculatePriceStrategies/NoDiscountStrategy.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/CalculatePriceStrategies/NoDiscountStrategy.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service/CalculatePriceStrategies/PercentStrategy.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/CalculatePriceStrategies/PercentStrategy.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service/PurchaseScenario.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/PurchaseScenario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/AddPercentValueTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/AddPercentValueTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/CalculatePriceScenarioTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/CalculatePriceScenarioTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,6 +39,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "robotateme"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/robotateme/shop_api.git",
+    "accountId": "99488cc3-6ad5-43e0-b132-6d843df9818d"
+  }
+}]]></component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/bin/php">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/composer" />
@@ -213,11 +197,24 @@
       <updated>1768211977862</updated>
       <workItem from="1768211978940" duration="23895000" />
       <workItem from="1768330729108" duration="5438000" />
-      <workItem from="1768345551270" duration="3276000" />
+      <workItem from="1768345551270" duration="7461000" />
     </task>
+    <task id="LOCAL-00001" summary="Recovery Commit">
+      <option name="closed" value="true" />
+      <created>1768351338948</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1768351338948</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Recovery Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Recovery Commit" />
   </component>
 </project>

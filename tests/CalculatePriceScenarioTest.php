@@ -12,6 +12,7 @@ use App\Repository\ProductRepository;
 use App\Repository\TaxRepository;
 use App\Service\CalculatePriceScenario;
 use App\Service\Exceptions\CalculatePriceException;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\MockObject\Exception;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\VarExporter\Exception\ExceptionInterface;
@@ -19,12 +20,29 @@ use Symfony\Component\VarExporter\Hydrator;
 
 class CalculatePriceScenarioTest extends TestCase
 {
-    /**
+    public static function additionProvider(): array
+    {
+        return [
+//            [12000, 20, 20, CouponTypesEnum::TypePercent, 115.20],
+//            [12000, 20, 20, CouponTypesEnum::TypeFixed, 143.80],
+//            [12000, 20, 20, CouponTypesEnum::TypeDefault, 144],
+//            [10000, 10000, 20, CouponTypesEnum::TypeFixed, 20.0],
+            [10000, 10000, 0, CouponTypesEnum::TypeFixed, 20.0],
+        ];
+    }
+
+    /**115.20
      * @throws CalculatePriceException
      * @throws Exception
      * @throws ExceptionInterface
      */
-    public function testCalculate(): void
+    #[DataProvider('additionProvider')]
+    public function testCalculate(
+        int $price,
+        int $percent,
+        int $taxRate,
+        CouponTypesEnum $couponType,
+        float $expectedPrice): void
     {
         $dto = Hydrator::hydrate(new CalculatePriceInputDto, [
             'product' => 1,
@@ -33,23 +51,23 @@ class CalculatePriceScenarioTest extends TestCase
         ]);
 
         $product = new Product();
-        $product->setPrice(12000)
+        $product->setPrice($price)
             ->setTitle('Product#1');
 
         $coupon = new Coupon();
         $coupon->setCode('P20');
-        $coupon->setType(CouponTypesEnum::TypePercent);
-        $coupon->setValue(20);
+        $coupon->setType($couponType);
+        $coupon->setValue($percent);
 
         $tax = new Tax();
         $tax->setNumber('FRAN123456789');
-        $tax->setRate(20);
+        $tax->setRate($taxRate);
 
         $productRepository = $this->createMock(ProductRepository::class);
         $productRepository->expects($this->once())
-                ->method('find')
-                ->with(1)
-                ->willReturn($product);
+            ->method('find')
+            ->with(1)
+            ->willReturn($product);
 
         $taxRepository = $this->createMock(TaxRepository::class);
         $taxRepository->expects($this->once())
@@ -69,7 +87,11 @@ class CalculatePriceScenarioTest extends TestCase
             $taxRepository
         );
 
+        if($taxRate <= 0) {
+            $this->expectException(CalculatePriceException::class);
+        }
+
         $resultDto = $service->handle($dto);
-        $this->assertEquals(115.20, $resultDto->finalPrice);
+        $this->assertEquals($expectedPrice, $resultDto->finalPrice);
     }
 }

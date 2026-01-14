@@ -2,7 +2,7 @@
 
 namespace App\Service;
 
-use App\Dto\CalculatePriceOutput;
+use App\Dto\CalculatePriceOutputDto;
 use App\Enum\PaymentProcessorsEnum;
 use App\Service\Exceptions\PurchaseException;
 use Exception;
@@ -14,7 +14,7 @@ readonly class PurchaseScenario
     /**
      * @throws PurchaseException
      */
-    public function handle(CalculatePriceOutput $input, string $paymentProcessor): bool
+    public function handle(CalculatePriceOutputDto $input, string $paymentProcessor): bool
     {
         switch (true) {
             case $paymentProcessor === PaymentProcessorsEnum::Paypal->value:
